@@ -1,9 +1,8 @@
-import React from 'react'
-import './Blog.scss';
-
+import React from "react";
+import "./Blog.scss";
 const Blog = () => {
   return (
-    <div className='blog-container'>
+    <article className="blog-container">
       <img className='img-cover' src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" />
       <div className='blog-body'>
         <div className='author-info-container'>
@@ -21,13 +20,12 @@ const Blog = () => {
             <button>bookmark</button>
           </div>
         </div>
-        <h2>How to get your first job as a self-taught programmer</h2>
+        <h2 className='heading2'>How to get your first job as a self-taught programmer</h2>
         <p className='tags'>#beginners #programming</p>
         <button>Marked as read</button>
       </div>
+    </article>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Blog
+export default Blog;

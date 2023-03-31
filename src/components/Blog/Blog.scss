@@ -1,7 +1,5 @@
-// @use "../../scss/util/reuse";
 .blog-container {
   max-width: 845px;
-  background: #000;
 
   .img-cover {
     width: 100%;
@@ -13,5 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .heading2 {
   }
 }

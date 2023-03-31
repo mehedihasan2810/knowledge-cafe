@@ -1,19 +1,12 @@
-import React, { useEffect } from 'react'
-import Blog from '../blog/blog'
+import React from "react";
+import "./Blogs.scss";
+import Blog from "../Blog/Blog";
 const Blogs = () => {
-
-
-// useEffect(() => {
-//   fetch('../../fakeData/blogs.json')
-//   .then((res) => console.log(res))
-//   .then((data) => console.log(data))
-// },[])
-
   return (
     <div>
-      <Blog/>
+      <Blog />
     </div>
-  )
-}
+  );
+};
 
-export default Blogs
+export default Blogs;
