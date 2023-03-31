@@ -30,7 +30,7 @@ const Blogs = () => {
 
   useEffect(() => {
     const abortController = new AbortController();
-    fetch("src/fakeData/blogs.json", {
+    fetch("blogs.json", {
       signal: abortController.signal,
     })
       .then((res) => res.json())
