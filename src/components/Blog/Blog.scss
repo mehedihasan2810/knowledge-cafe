@@ -37,7 +37,23 @@
     gap: 0.2rem;
   }
   .btn-bookmark {
+    position: relative;
     cursor: pointer;
+  }
+  .toast-bookmark {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    background-color: rgb(251, 189, 35);
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    display: none;
+  }
+  .show-toast{
+    display: block;
   }
   .heading2 {
     @extend %heading-medium;

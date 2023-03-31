@@ -1,17 +1,15 @@
 import React from "react";
 import "./Blog.scss";
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-const Blog = ({blogData, onTimeSpent, onAddBookmarkBlogs}) => {
-
-  const {
-    author,
-    title,
-    tag,
-    authorImage,
-    coverImage,
-    readTime,
-    published,
-  } = blogData;
+import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
+const Blog = ({
+  blogData,
+  onTimeSpent,
+  onAddBookmarkBlogs,
+  isToastShow,
+  currentTitle,
+}) => {
+  const { author, title, tag, authorImage, coverImage, readTime, published } =
+    blogData;
   return (
     <article className="blog-container">
       <img className="img-cover" src={coverImage} alt="" />
@@ -26,12 +24,26 @@ const Blog = ({blogData, onTimeSpent, onAddBookmarkBlogs}) => {
           </div>
           <div className="read-bookmark">
             <p className="p-sm">{readTime} min read</p>
-            <button onClick={() => onAddBookmarkBlogs(title)} className="btn-bookmark"><BookmarkBorderIcon/></button>
+            <button
+              onClick={() => onAddBookmarkBlogs(title)}
+              className="btn-bookmark"
+            >
+              <BookmarkBorderIcon />
+              <p
+                className={`toast-bookmark ${
+                  title === currentTitle && isToastShow && "show-toast"
+                }`}
+              >
+                You Have Already Bookmarked This Blog!
+              </p>
+            </button>
           </div>
         </div>
         <h2 className="heading2">{title}</h2>
         <p className="tags p-sm">{tag}</p>
-        <button onClick={() => onTimeSpent(readTime)} className="btn-mark">Marked as read</button>
+        <button onClick={() => onTimeSpent(readTime)} className="btn-mark">
+          Marked as read
+        </button>
       </div>
     </article>
   );

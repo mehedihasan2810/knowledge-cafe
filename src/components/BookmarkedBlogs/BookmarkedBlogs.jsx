@@ -5,7 +5,7 @@ const BookmarkedBlogs = ({ bookmarkBlogs }) => {
     <div className="bookmark-container">
       <h4>Bookmarked Blogs: {bookmarkBlogs.length}</h4>
       {bookmarkBlogs.length !== 0 &&
-        bookmarkBlogs.map((bookmarkBlog) => <h5>{bookmarkBlog}</h5>)}
+        bookmarkBlogs.map((bookmarkBlog, index) => <h5 key={index}>{bookmarkBlog}</h5>)}
     </div>
   );
 };

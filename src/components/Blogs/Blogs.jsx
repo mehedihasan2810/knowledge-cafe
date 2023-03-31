@@ -7,6 +7,8 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [totalTimeSpent, setTotalTimeSpent] = useState(0);
   const [bookmarkBlogs, setBookmarkBlogs] = useState([]);
+  const [isToastShow, setIsToastShow] = useState(false);
+  const [currentTitle, setCurrentTitle] = useState("");
 
   function handleTimeSpent(readTime) {
     setTotalTimeSpent((prevTime) => {
@@ -16,6 +18,11 @@ const Blogs = () => {
   }
 
   function handleBookmarkBlogs(title) {
+    if (bookmarkBlogs.includes(title)) {
+      setIsToastShow(true);
+      setCurrentTitle(title);
+      return;
+    }
     setBookmarkBlogs((prevBookmark) => {
       return [...prevBookmark, title];
     });
@@ -27,12 +34,25 @@ const Blogs = () => {
       signal: abortController.signal,
     })
       .then((res) => res.json())
-      .then((data) => setBlogs(data));
+      .then((data) => {
+        setBlogs(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    let timerId;
+    if (isToastShow) {
+      timerId = setTimeout(() => {
+        setIsToastShow(false);
+      }, 2000);
+    }
 
     return () => {
       abortController.abort();
+      clearTimeout(timerId);
     };
-  }, []);
+  }, [isToastShow]);
 
   return (
     <main>
@@ -43,6 +63,8 @@ const Blogs = () => {
             blogData={blog}
             onTimeSpent={handleTimeSpent}
             onAddBookmarkBlogs={handleBookmarkBlogs}
+            isToastShow={isToastShow}
+            currentTitle={currentTitle}
           />
         ))}
       </div>
