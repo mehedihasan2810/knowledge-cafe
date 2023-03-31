@@ -1,15 +1,17 @@
 import React from "react";
 import "./Blog.scss";
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-const Blog = ({
-  author,
-  title,
-  tag,
-  authorImage,
-  coverImage,
-  readTime,
-  published,
-}) => {
+const Blog = ({blogData, onTimeSpent}) => {
+
+  const {
+    author,
+    title,
+    tag,
+    authorImage,
+    coverImage,
+    readTime,
+    published,
+  } = blogData;
   return (
     <article className="blog-container">
       <img className="img-cover" src={coverImage} alt="" />
@@ -23,13 +25,13 @@ const Blog = ({
             </div>
           </div>
           <div className="read-bookmark">
-            <p className="p-sm">{readTime}</p>
+            <p className="p-sm">{readTime} min read</p>
             <button className="btn-bookmark"><BookmarkBorderIcon/></button>
           </div>
         </div>
         <h2 className="heading2">{title}</h2>
         <p className="tags p-sm">{tag}</p>
-        <button className="btn-mark">Marked as read</button>
+        <button onClick={() => onTimeSpent(readTime)} className="btn-mark">Marked as read</button>
       </div>
     </article>
   );

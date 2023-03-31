@@ -1,11 +1,16 @@
-@use '../../scss/util/reuse';
-main{
-@extend %center-container;
-display: grid;
-grid-template-columns: 2fr 1fr;
-gap: 1rem;
+@use "../../scss/util/reuse";
+main {
+  @extend %center-container;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
 
-aside{
+  aside {
+    height: fit-content;
     margin-top: 2rem;
-}
+  }
+  .sticky {
+    position: sticky;
+    top: 1rem;
+  }
 }

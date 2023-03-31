@@ -1,9 +1,9 @@
 import React from 'react'
 import './TimeSpent.scss';
-const TimeSpent = () => {
+const TimeSpent = ({totalTimeSpent}) => {
   return (
     <p className='time-spent'>
-     Spent time on read: 144 min
+     Spent time on read: {totalTimeSpent} min
     </p>
   )
 }

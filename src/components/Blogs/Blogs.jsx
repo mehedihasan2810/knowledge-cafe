@@ -5,6 +5,16 @@ import BookmarkedBlogs from "../BookmarkedBlogs/BookmarkedBlogs";
 import TimeSpent from "../TimeSpent/TimeSpent";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
+  const [totalTimeSpent, setTotalTimeSpent] = useState(0);
+  const [bookmarkBlogs, setBookmarkBlogs] = useState([]);
+
+  function handleTimeSpent(readTime) {
+    setTotalTimeSpent((prevTime) => {
+      const totalTime = prevTime + readTime;
+      return totalTime;
+    })
+  }
+
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -23,12 +33,15 @@ const Blogs = () => {
     <main>
       <div className="blogs-container">
         {blogs.map((blog) => (
-          <Blog key={blog.id} {...blog} />
+          <Blog 
+          key={blog.id} 
+          blogData={blog} 
+          onTimeSpent={handleTimeSpent} />
         ))}
       </div>
-      <aside>
-        <TimeSpent />
-        <BookmarkedBlogs />
+      <aside className="sticky">
+        <TimeSpent totalTimeSpent={totalTimeSpent} />
+        <BookmarkedBlogs bookmarkBlogs={bookmarkBlogs} />
       </aside>
     </main>
   );
