@@ -1,7 +1,7 @@
 import React from "react";
 import "./Blog.scss";
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-const Blog = ({blogData, onTimeSpent}) => {
+const Blog = ({blogData, onTimeSpent, onAddBookmarkBlogs}) => {
 
   const {
     author,
@@ -26,7 +26,7 @@ const Blog = ({blogData, onTimeSpent}) => {
           </div>
           <div className="read-bookmark">
             <p className="p-sm">{readTime} min read</p>
-            <button className="btn-bookmark"><BookmarkBorderIcon/></button>
+            <button onClick={() => onAddBookmarkBlogs(title)} className="btn-bookmark"><BookmarkBorderIcon/></button>
           </div>
         </div>
         <h2 className="heading2">{title}</h2>

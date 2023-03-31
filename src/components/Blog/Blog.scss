@@ -25,7 +25,7 @@
     @extend %img-rounded-sm;
   }
   .author-name {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #111111;
   }
   .p-sm {
@@ -52,5 +52,19 @@
     font-weight: 600;
     font-size: 20px;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    .img-cover {
+      height: auto;
+    }
+    .author-name {
+      font-size: 1.3rem;
+    }
+    .heading2 {
+      font-size: 2rem;
+    }
   }
 }

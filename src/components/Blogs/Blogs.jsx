@@ -12,9 +12,14 @@ const Blogs = () => {
     setTotalTimeSpent((prevTime) => {
       const totalTime = prevTime + readTime;
       return totalTime;
-    })
+    });
   }
 
+  function handleBookmarkBlogs(title) {
+    setBookmarkBlogs((prevBookmark) => {
+      return [...prevBookmark, title];
+    });
+  }
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -33,10 +38,12 @@ const Blogs = () => {
     <main>
       <div className="blogs-container">
         {blogs.map((blog) => (
-          <Blog 
-          key={blog.id} 
-          blogData={blog} 
-          onTimeSpent={handleTimeSpent} />
+          <Blog
+            key={blog.id}
+            blogData={blog}
+            onTimeSpent={handleTimeSpent}
+            onAddBookmarkBlogs={handleBookmarkBlogs}
+          />
         ))}
       </div>
       <aside className="sticky">
