@@ -5,12 +5,12 @@ import Navbar from "./components/Header/Header";
 import Blogs from "./components/Blogs/Blogs";
 const App = () => {
   return (
-    <div>
-     <Navbar/>
-     <Blogs/>
-     <FAQ/>
+    <div className="app-container">
+      <Navbar />
+      <Blogs />
+      <FAQ />
     </div>
-  )
+  );
 };
 
 export default App;

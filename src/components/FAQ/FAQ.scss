@@ -1,0 +1,19 @@
+@use "../../scss/util/reuse";
+
+.faq-container {
+  @extend %center-container;
+  margin-bottom: 5rem;
+
+  h2 {
+    @extend %heading-medium;
+    width: fit-content;
+    margin: 2rem 0 2rem 4rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid;
+  }
+
+  .faq {
+    max-width: 600px;
+    margin-bottom: 1rem;
+  }
+}

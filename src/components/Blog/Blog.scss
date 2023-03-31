@@ -52,7 +52,7 @@
     border-radius: 6px;
     display: none;
   }
-  .show-toast{
+  .show-toast {
     display: block;
   }
   .heading2 {
@@ -81,6 +81,15 @@
     }
     .heading2 {
       font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    .toast-bookmark {
+      transform: translate(-83%, -63%);
+      width: 30ch;
     }
   }
 }
