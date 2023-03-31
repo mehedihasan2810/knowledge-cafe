@@ -1,0 +1,4 @@
+@use '../../scss/util/reuse';
+.blogs-container{
+@extend %center-container;
+}
