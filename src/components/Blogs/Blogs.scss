@@ -1,4 +1,11 @@
 @use '../../scss/util/reuse';
-.blogs-container{
+main{
 @extend %center-container;
+display: grid;
+grid-template-columns: 2fr 1fr;
+gap: 1rem;
+
+aside{
+    margin-top: 2rem;
+}
 }

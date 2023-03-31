@@ -1,0 +1,21 @@
+.bookmark-container {
+  background: rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 1rem;
+
+  h4 {
+    font-size: 24px;
+    color: #111111;
+  }
+
+  h5 {
+    font-weight: 600;
+    font-size: 18px;
+    color: #111111;
+    padding: 1rem;
+    background: #ffffff;
+    margin-top: 1rem;
+    border-radius: 8px;
+  }
+}

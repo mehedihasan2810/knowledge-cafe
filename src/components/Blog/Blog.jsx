@@ -1,5 +1,6 @@
 import React from "react";
 import "./Blog.scss";
+import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 const Blog = ({
   author,
   title,
@@ -23,7 +24,7 @@ const Blog = ({
           </div>
           <div className="read-bookmark">
             <p className="p-sm">{readTime}</p>
-            <button>bookmark</button>
+            <button className="btn-bookmark"><BookmarkBorderIcon/></button>
           </div>
         </div>
         <h2 className="heading2">{title}</h2>

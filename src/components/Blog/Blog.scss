@@ -2,7 +2,10 @@
 .blog-container {
   max-width: 845px;
   padding: 2rem 0;
-  border-top: 1px solid rgba(17, 17, 17, 0.15);
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+  }
 
   .img-cover {
     width: 100%;
@@ -31,7 +34,10 @@
   }
   .read-bookmark {
     @extend %flex-center;
-    gap: 0.5rem;
+    gap: 0.2rem;
+  }
+  .btn-bookmark {
+    cursor: pointer;
   }
   .heading2 {
     @extend %heading-medium;
