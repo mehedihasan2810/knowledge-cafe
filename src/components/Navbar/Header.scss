@@ -1,0 +1,19 @@
+@use "../../scss/util/reuse";
+
+header {
+  .center-header {
+    @extend %center-container;
+    @extend %flex-center;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
+  }
+  h2 {
+    @extend %heading-medium;
+  }
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

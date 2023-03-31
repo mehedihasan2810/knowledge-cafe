@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "author": "John Doe",
+    "title": "How to be a ninja coder",
+    "tag": "#beginner #programming",
+    "authorImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "coverImage": "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1206&q=80",
+    "readTime": "05 min read",
+    "published": "Mar 29 (02 Days ago)"
+  },
+  {
+    "id": 2,
+    "author": "Dan Abramov",
+    "title": "How would I learn programming if I had to start again",
+    "tag": "#beginner #programming",
+    "authorImage": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+    "coverImage": "https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "readTime": "10 min read",
+    "published": "Mar 27 (04 Days ago)"
+  },
+  {
+    "id": 3,
+    "author": "Linus Torvalds",
+    "title": "Learn TypeScript in a easiest way possible",
+    "tag": "#beginner #typescript",
+    "authorImage": "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+    "coverImage": "https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "readTime": "15 min read",
+    "published": "Mar 25 (06 Days ago)"
+  },
+  {
+    "id": 4,
+    "author": "Brendan Eich",
+    "title": "How to get your first job as a self-taught programmer",
+    "tag": "#beginner #programming",
+    "authorImage": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "coverImage": "https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "readTime": "10 min read",
+    "published": "Mar 20 (11 Days ago)"
+  }
+]
